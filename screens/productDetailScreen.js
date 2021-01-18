@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text,StyleSheet,Image } from 'react-native';
+import { View, Text,StyleSheet,Image,ToastAndroid } from 'react-native';
 import { useDispatch } from 'react-redux';
 import Header from '../components/header';
 import ProductDetails from '../components/details';
@@ -26,7 +26,8 @@ export default function productDetailScreen(props) {
                 title={title}
                 price={price}
                 onAddToCart={()=>{
-                    dispatch(cartActions.addToCart(item))
+                    dispatch(cartActions.addToCart(item));
+                    ToastAndroid.show('Added to cart!',ToastAndroid.SHORT);
                 }}
             />
         </View>

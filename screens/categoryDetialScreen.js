@@ -1,5 +1,5 @@
 import React,{useState,useEffect} from 'react'
-import { View, Text ,StyleSheet,FlatList,Image,ActivityIndicator} from 'react-native';
+import { View, Text ,StyleSheet,FlatList,Image,ActivityIndicator,ToastAndroid} from 'react-native';
 import { useDispatch } from 'react-redux';
 
 import Header from '../components/header';
@@ -80,7 +80,8 @@ export default function categoryDetialScreen(props) {
                                 })
                             }}
                             onAddToCart={()=>{
-                                dispatch(cartActions.addToCart(item))
+                                dispatch(cartActions.addToCart(item));
+                                ToastAndroid.show('Added to cart!',ToastAndroid.SHORT);
                             }}
                         />
                     )}
