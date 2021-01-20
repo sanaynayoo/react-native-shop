@@ -20,7 +20,7 @@ export default function categoryDetialScreen(props) {
     const fetchProdDetail = async () => {
         try {
             const response = await fetch(
-                `http://backend.sbbabyshop.com/list/product/?categ_id=${id}`,
+                `apiRoute`,
                 {
                 method: 'GET',
                 // headers: {

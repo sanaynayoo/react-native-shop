@@ -5,7 +5,7 @@ export const setProduct =()=>{
         // const token = getState().auth.token
         try {
             const response = await fetch(
-                'http://backend.sbbabyshop.com/product/categories',
+                'apiRoute',
                 {
                     method:'GET',
                     // headers:{
